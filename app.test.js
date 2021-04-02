@@ -16,6 +16,7 @@ test('debounced increment', () => {
     expect(value()).toBe(1);
 });
 
+// Passes, timer manipulation works
 test('debounced increment with timer manipulation v1.12.0', () => {
     jest.useFakeTimers('modern');
 
@@ -31,6 +32,7 @@ test('debounced increment with timer manipulation v1.12.0', () => {
     jest.useRealTimers();
 });
 
+// Fails, timer manipulation does not work
 test('debounced increment with timer manipulation v1.12.1', () => {
     jest.useFakeTimers('modern');
 
