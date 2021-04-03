@@ -34,6 +34,7 @@ test('debounced increment with timer manipulation v1.12.0', () => {
 
 // Fails, timer manipulation does not work
 test('debounced increment with timer manipulation v1.12.1', () => {
+    _1_12_1.mixin({debounce: _1_12_0.debounce});
     jest.useFakeTimers('modern');
 
     var debouncedIncrement = _1_12_1.debounce(increment, 1000, true);
